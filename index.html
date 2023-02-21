@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="time-display">
+            <img src="Images/clock1.svg" alt="clock-img">
+            <div id="clock"></div>
+        </div>
+
+        <div class="inside">
+            <form class="set-alarm">
+                <label for="" class="alarm-heading">
+                    <h2 class="font-style">Set Alarm</h2>
+                </label><br>
+                <div class="set-alarm-field">
+                    <input type="number" name="a_hour" id="a_hour" placeholder="HH" max="12" min="00">
+                    <input type="number" name="a_min" id="a_min" placeholder="MM" max="59" min="00">
+                    <input type="number" name="a_sec" id="a_sec" placeholder="SS" max="59" min="00">
+                    <input type="text" name="am_pm" id="am_pm" placeholder="AM/PM" list="session">
+                    <datalist id="session">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </datalist>
+                </div>
+                <div class="controls">
+                    <button type="submit" class="set-alarm">Set Alarm</button>
+                    <button type="reset" onclick="clearAlarm()" class="clear-alarm">Stop Alarm</button>
+                </div>
+            </form>
+
+            <br> <br>
+            <section id="upcoming-alarms">
+                <div>
+                    <h2 class="alarm-heading font-style">Upcoming Alarms</h2>
+                </div>
+                <div class="alarm-list">
+                    <ul id="myList">
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
